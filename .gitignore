@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.log
+*.txt
+*.html
+.idea
+.git
+.sqlite
+.xlsx
+.zip
+.csv
+.exe
