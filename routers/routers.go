@@ -25,16 +25,15 @@ func Init() *gin.Engine {
 
 	// Logging to a file.
 	f, _ := os.Create("gin.log")
-	gin.DefaultWriter = io.MultiWriter(f)
+	//gin.DefaultWriter = io.MultiWriter(f)
 
 	// 如果需要同时将日志写入文件和控制台，请使用以下代码。
-	// gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
 	// gin.Default()默认使用了Logger和Recovery中间件
 	r := gin.Default()
 	// 不使用任何中间件
 	// r:=gin.New()
-
 	// 全局中间件
 	//r.Use(gin.Logger())
 	//r.Use(gin.Recovery())
